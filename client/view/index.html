@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>qiyu-web接入demo</title>
+        <link rel="shortcut icon" href="https://ysf.qiyukf.net/operation/1d618cc5046ea502010253397c79e675">
+    </head>
+    <body>
+        <div id="j-root" class="g-bd"></div>
+        <%=htmlWebpackPlugin.files.webpackManifest%>
+        <script>
+        // 初始化 sdk 替换为自己企业的相关信息
+        (function (w, d, n, a, j) {
+            w[n] = w[n] || function () {
+                (w[n].a = w[n].a || []).push(arguments);
+            };
+            j = d.createElement('script');
+            j.async = true;
+            j.src ='https://qiyukf.com/script/ba5e6e832ae0cf651df1540eaabc62eb.js';
+            d.body.appendChild(j);
+        })(window, document, 'ysf');
+        </script>
+    </body>
+</html>
